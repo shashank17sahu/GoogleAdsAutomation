@@ -17,7 +17,7 @@ public class Library
 	String exp,act;
 	ArrayList<String> tab2;
 	
-	 void OpenBrowser(String URL) throws IOException
+	public String OpenBrowser(String URL) throws IOException
 	{
 		Fis=new FileInputStream("C:\\Users\\SHASHANK\\Desktop\\GoogleAdsA\\GoogleAds\\src\\main\\java\\file\\GoogleData.properties");
 		pr=new Properties();
@@ -25,9 +25,45 @@ public class Library
 		driver=new ChromeDriver();
 		driver.get(URL);
 		System.out.println(driver.getTitle());
+		return "BrowserOpen";
 	}
 	
-	void LearningAndsupport() throws InterruptedException 
+	public String AboutGoogleAds() throws InterruptedException
+	{
+// How it works		
+		driver.findElement(By.xpath(pr.getProperty("HowItWOrks"))).click();Thread.sleep(2000);
+		
+		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		
+// Overview		
+		driver.findElement(By.xpath(pr.getProperty("Overview"))).click();Thread.sleep(2000);
+		
+		exp ="Get More Customers With Easy Online Advertising | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		
+// Cost		
+		driver.findElement(By.xpath(pr.getProperty("Cost"))).click();Thread.sleep(2000);
+		
+		exp ="Set a Flexible Advertising Budget that Works | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		return "AboutGoogleAds Links Pass";
+		
+	}
+	
+	public String LearningAndsupport() throws InterruptedException 
 	{
 // Your Guide to Google Ads
 		driver.findElement(By.xpath(pr.getProperty("YourGuidetoGoogleAds"))).click();Thread.sleep(2000);
@@ -93,9 +129,10 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		driver.close();driver.switchTo().window(tab2.get(0));		
+		return "LearningAndsupport Links Pass";
 	}
 
-	void DevelopersAndPartners() throws InterruptedException
+	public String DevelopersAndPartners() throws InterruptedException
 	{
 
 // Google Developers Site		
@@ -147,10 +184,11 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		driver.close();driver.switchTo().window(tab2.get(0));
+		return "DevelopersAndPartners links Pass";
 	}
 	
 	
-	void RelatedProducts() throws InterruptedException
+	public String RelatedProducts() throws InterruptedException
 	{
 // Shopping campaigns		
 		driver.findElement(By.xpath(pr.getProperty("Shoppingcampaigns"))).click();Thread.sleep(2000);
@@ -200,12 +238,13 @@ public class Library
 		{	System.out.println("Success");}
 		else
 		{System.out.println("Unsuccessful");}
-		driver.close();driver.switchTo().window(tab2.get(0));		
+		driver.close();driver.switchTo().window(tab2.get(0));
+		return "RelatedProducts links Pass";
 		
 	}
 	
 	
-	void MoreSolution() throws InterruptedException
+	public String MoreSolution() throws InterruptedException
 	{
 // Business Solutions		
 		driver.findElement(By.xpath(pr.getProperty("BusinessSolutions"))).click();Thread.sleep(2000);
@@ -256,11 +295,11 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		driver.close();driver.switchTo().window(tab2.get(0));
+		return "MoreSolution Links Pass";
 	}
 	
-	void AboutGoogleAds() throws InterruptedException
+	public void HeaderLinks() throws InterruptedException
 	{
-// How it works		
 		driver.findElement(By.xpath(pr.getProperty("HowItWOrks"))).click();Thread.sleep(2000);
 		
 		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
@@ -269,58 +308,11 @@ public class Library
 		{	System.out.println("Success");}
 		else
 		{System.out.println("Unsuccessful");}
-		
-// Overview		
-		driver.findElement(By.xpath(pr.getProperty("Overview"))).click();Thread.sleep(2000);
-		
-		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
-		
-		if(exp.equalsIgnoreCase(act))
-		{	System.out.println("Success");}
-		else
-		{System.out.println("Unsuccessful");}
-		
-// Cost		
-		driver.findElement(By.xpath(pr.getProperty("Cost"))).click();Thread.sleep(2000);
-		
-		exp ="Get More Customers With Easy Online Advertising | Google Ads";act = driver.getTitle();System.out.println(act);
-		
-		if(exp.equalsIgnoreCase(act))
-		{	System.out.println("Success");}
-		else
-		{System.out.println("Unsuccessful");}		
 	}
-	
-	void FollowUs() throws InterruptedException
-	{
-// Facebook	
-		driver.findElement(By.xpath(pr.getProperty("Facebook"))).click();Thread.sleep(2000);
-		tab2=new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tab2.get(1));
-
-		exp ="Google Ads - ???????? | Facebook";act = driver.getTitle();System.out.println(act);
-		
-		if(exp.equalsIgnoreCase(act))
-		{	System.out.println("Success");}
-		else
-		{System.out.println("Unsuccessful");}
-		driver.close();driver.switchTo().window(tab2.get(0));
-// Twitter		
-		driver.findElement(By.xpath(pr.getProperty("Twitter"))).click();Thread.sleep(2000);
-		tab2=new ArrayList<String>(driver.getWindowHandles());
-		driver.switchTo().window(tab2.get(1));
-
-		exp ="Google Ads (@GoogleAds) / Twitter";act = driver.getTitle();System.out.println(act);
-		
-		if(exp.equalsIgnoreCase(act))
-		{	System.out.println("Success");}
-		else
-		{System.out.println("Unsuccessful");}
-		driver.close();driver.switchTo().window(tab2.get(0));			
-	}
-	void CloseBrowser()
+	public String CloseBrowser()
 	{
 		driver.close();
+		return "Browser Close";
 	}
 
 }

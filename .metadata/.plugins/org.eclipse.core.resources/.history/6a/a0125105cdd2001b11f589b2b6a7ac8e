@@ -1,0 +1,33 @@
+package basic;
+
+import java.io.IOException;
+
+public class ExecuteLibrary {
+
+	public static void main(String[] args) throws IOException, InterruptedException
+	{
+		Library obj=new Library(); 
+		String ob =obj.OpenBrowser("https://ads.google.com");
+		System.out.println(ob);
+		
+		String las=obj.LearningAndsupport();
+		System.out.println(las);
+		
+		String rp=obj.RelatedProducts();
+		System.out.println(rp);
+		
+		String dap=obj.DevelopersAndPartners();
+		System.out.println(dap);
+		
+		String ms=obj.MoreSolution();
+		System.out.println(ms);
+		
+		String aga=obj.AboutGoogleAds();
+		System.out.println(aga);
+		
+		String cb=obj.CloseBrowser();
+		System.out.println(cb);
+		
+	}
+
+}
