@@ -293,7 +293,6 @@ public class Library
 	
 	void FollowUs() throws InterruptedException
 	{
-// Facebook	
 		driver.findElement(By.xpath(pr.getProperty("Facebook"))).click();Thread.sleep(2000);
 		tab2=new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tab2.get(1));
@@ -305,7 +304,7 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		driver.close();driver.switchTo().window(tab2.get(0));
-// Twitter		
+// AdMob		
 		driver.findElement(By.xpath(pr.getProperty("Twitter"))).click();Thread.sleep(2000);
 		tab2=new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tab2.get(1));

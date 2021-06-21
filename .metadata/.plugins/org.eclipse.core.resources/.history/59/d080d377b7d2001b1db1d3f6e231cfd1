@@ -17,13 +17,13 @@ public class Library
 	String exp,act;
 	ArrayList<String> tab2;
 	
-	 void OpenBrowser(String URL) throws IOException
+	 void OpenBrowser() throws IOException
 	{
 		Fis=new FileInputStream("C:\\Users\\SHASHANK\\Desktop\\GoogleAdsA\\GoogleAds\\src\\main\\java\\file\\GoogleData.properties");
 		pr=new Properties();
 		pr.load(Fis);
 		driver=new ChromeDriver();
-		driver.get(URL);
+		driver.get("https://ads.google.com");
 		System.out.println(driver.getTitle());
 	}
 	
@@ -260,7 +260,7 @@ public class Library
 	
 	void AboutGoogleAds() throws InterruptedException
 	{
-// How it works		
+// Google Developers Site		
 		driver.findElement(By.xpath(pr.getProperty("HowItWOrks"))).click();Thread.sleep(2000);
 		
 		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
@@ -270,7 +270,7 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		
-// Overview		
+// Google Developers Site		
 		driver.findElement(By.xpath(pr.getProperty("Overview"))).click();Thread.sleep(2000);
 		
 		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
@@ -280,10 +280,10 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		
-// Cost		
+// Google Developers Site		
 		driver.findElement(By.xpath(pr.getProperty("Cost"))).click();Thread.sleep(2000);
 		
-		exp ="Get More Customers With Easy Online Advertising | Google Ads";act = driver.getTitle();System.out.println(act);
+		exp ="Set a Flexible Advertising Budget that Works | Google Ads";act = driver.getTitle();System.out.println(act);
 		
 		if(exp.equalsIgnoreCase(act))
 		{	System.out.println("Success");}
@@ -293,7 +293,6 @@ public class Library
 	
 	void FollowUs() throws InterruptedException
 	{
-// Facebook	
 		driver.findElement(By.xpath(pr.getProperty("Facebook"))).click();Thread.sleep(2000);
 		tab2=new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tab2.get(1));
@@ -305,7 +304,7 @@ public class Library
 		else
 		{System.out.println("Unsuccessful");}
 		driver.close();driver.switchTo().window(tab2.get(0));
-// Twitter		
+// AdMob		
 		driver.findElement(By.xpath(pr.getProperty("Twitter"))).click();Thread.sleep(2000);
 		tab2=new ArrayList<String>(driver.getWindowHandles());
 		driver.switchTo().window(tab2.get(1));

@@ -8,11 +8,11 @@ public class ExecuteLibrary {
 	{
 		Library obj=new Library(); 
 		obj.OpenBrowser("https://ads.google.com");
-//		obj.LearningAndsupport();
-//		obj.RelatedProducts();
-//		obj.DevelopersAndPartners();
-//		obj.MoreSolution();
-//		obj.AboutGoogleAds();
+		obj.LearningAndsupport();
+		obj.RelatedProducts();
+		obj.DevelopersAndPartners();
+		obj.MoreSolution();
+		obj.AboutGoogleAds();
 		obj.FollowUs();
 		obj.CloseBrowser();
 		

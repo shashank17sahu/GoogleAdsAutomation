@@ -7,7 +7,7 @@ public class ExecuteLibrary {
 	public static void main(String[] args) throws IOException, InterruptedException
 	{
 		Library obj=new Library(); 
-		obj.OpenBrowser("https://ads.google.com");
+//		obj.OpenBrowser("https://ads.google.com");
 //		obj.LearningAndsupport();
 //		obj.RelatedProducts();
 //		obj.DevelopersAndPartners();
