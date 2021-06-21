@@ -1,0 +1,48 @@
+#All Footer Sites Links
+# Learning & support 
+YourGuidetoGoogleAds = 	//a[contains(text(),'Your Guide to Google Ads')]
+GoogleAdsHelpCenter = 	//a[contains(text(),'Google Ads Help Center')]
+Primer = 				//a[contains(text(),'Primer')]
+Skillshop =				 //a[contains(text(),'Skillshop')]
+
+# Developers & partners 
+GoogleDevelopersSite =		 //a[contains(text(),'Google Developers Site')]
+GoogleAdsAPI =				//a[contains(text(),'Google Ads API')]
+GoogleAdsScripts =			//a[contains(text(),'Google Ads Scripts')]
+GoogleAdsRemarketingTags =	//a[contains(text(),'Google Ads Remarketing Tags')]
+
+# Related products 
+Shoppingcampaigns =	//a[contains(text(),'Shopping campaigns')]
+GoogleMyBusiness =	//a[contains(text(),'Google My Business')]
+Chrome =			//a[contains(text(),'Chrome')]
+WazeLocalads =		//a[contains(text(),'Waze Local ads')]
+
+# More solutions 
+BusinessSolutions =	//a[contains(text(),'Business Solutions')]
+GoogleWorkspace =	//a[contains(text(),'Google Workspace')]
+AdSense =			//a[contains(text(),'AdSense')]
+AdMob =				//a[contains(text(),'AdMob')]
+
+# About Google Ads 
+HowItWOrks = 	//a[@class='glue-footer__link'][contains(text(),'How it works')]
+Overview =		//a[@class='glue-footer__link'][contains(text(),'Overview')]
+Cost =			//a[@class='glue-footer__link'][contains(text(),'Cost')]
+
+# Follow us 
+Facebook = /html/body/footer/section[1]/section/div/ul/li[2]/a
+Twitter =  a[class='glue-social__link'][aria-label='Follow us on Twitter']
+
+#All Header Sites links
+HeadOverview =	//span[@class='glue-header__link glue-header__link--list-1'][contains(text(),'Overview')]
+HeadHowitworks=	//a[@class='glue-header__link'][contains(text(),'How it works')]
+HeadCost =		//a[@class='glue-header__link'][contains(text(),'Cost')][@gtm-id='overall-cost-mainnav']
+FAQ =			//a[@class='glue-header__link'][contains(text(),'FAQ')]
+Advance =		//span[contains(text(),'Advance')]
+Contact =		//span[@class='glue-header__link glue-header__link--list-1'][contains(text(),'Contact')]
+
+CaseStudies =	//span[@class='glue-header__link glue-header__link--list-1'][contains(text(),'Case studies')]
+	BasicofOnlineMarketing = //a[@class='glue-header__link'][contains(text(),'Basics of online marketing')]
+	HowGoogleAdsWorks = 	//a[@class='glue-header__link'][contains(text(),'How Google Ads works')]
+	Costs&budget 			= //a[@class='glue-header__link'][contains(text(),'Costs & budgets')]
+
+
