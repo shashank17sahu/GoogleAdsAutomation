@@ -1,0 +1,19 @@
+package basic;
+
+import java.io.IOException;
+
+public class ExecuteLibrary {
+
+	public static void main(String[] args) throws IOException, InterruptedException
+	{
+		Library obj=new Library(); 
+		obj.OpenBrowser();
+//		obj.LearningAndsupport();
+//		obj.DevelopersAndPartners();
+		obj.m();
+//		obj.m3();
+		obj.CloseBrowser();
+		
+	}
+
+}

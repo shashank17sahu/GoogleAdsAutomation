@@ -1,0 +1,24 @@
+URL= "https://ads.google.com/"
+HowItWOrks= //a[contains(text(),'How it works')]
+//a[contains(text(),'Overview')]
+//a[contains(text(),'Cost')]
+
+//a[contains(text(),'Your Guide to Google Ads')]
+//a[contains(text(),'Google Ads Help Center')]
+//a[contains(text(),'Primer')]
+//a[contains(text(),'Skillshop')]
+
+//a[contains(text(),'Google Developers Site')]
+//a[contains(text(),'Google Ads API')]
+//a[contains(text(),'Google Ads Scripts')]
+//a[contains(text(),'Google Ads Remarketing Tags')]
+
+//a[contains(text(),'Shopping campaigns')]
+//a[contains(text(),'Google My Business')]
+//a[contains(text(),'Chrome')]
+//a[contains(text(),'Waze Local ads')]
+
+//a[contains(text(),'Business Solutions')]
+//a[contains(text(),'Google Workspace')]
+//a[contains(text(),'AdSense')]
+//a[contains(text(),'AdMob')]

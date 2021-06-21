@@ -1,0 +1,68 @@
+package basic;
+
+import java.util.ArrayList;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class Library
+{
+	 WebDriver driver;
+	 String exp,act;
+	 ArrayList<String> tab2;
+	void OpenBrowser()
+	{
+		driver=new ChromeDriver();
+		driver.get("https://ads.google.com");
+		System.out.println(driver.getTitle());
+	}
+	
+	void m1() throws InterruptedException
+	{
+		driver.findElement(By.xpath("//a[contains(text(),'Your Guide to Google Ads')]")).click();
+		Thread.sleep(5000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Your guide to Google Ads - Google Ads Help";
+		act = driver.getTitle();
+		System.out.println(act);
+		if(exp.equalsIgnoreCase(act))
+		{
+			System.out.println("Success");
+		}
+		else
+		{
+			System.out.println("Unsuccessful");
+		}
+		driver.close();
+		driver.switchTo().window(tab2.get(0));
+		
+	}
+	void m2() throws InterruptedException
+	{
+		Thread.sleep(2000);
+		//Dynamic Xpath
+		driver.findElement(By.xpath("//a[contains(text(),'Google Ads Help Center')]")).click();
+		Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Google Ads Help";
+		act = driver.getTitle();
+		System.out.println(act);
+		if(exp.equalsIgnoreCase(act))
+		{
+			System.out.println("Success");
+		}
+		else
+		{
+			System.out.println("Unsuccessful");
+		}
+		driver.close();
+		driver.switchTo().window(tab2.get(0));
+	}
+	
+
+}
