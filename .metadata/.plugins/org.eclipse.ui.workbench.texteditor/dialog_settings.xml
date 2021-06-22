@@ -7,6 +7,7 @@
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="//a[@class=&apos;glue-header__link&apos;][contains(text(),&apos;Contact&apos;)]"/>
 			<item value="//a[@class=&apos;glue-footer__link&apos;][contains(text(),&apos;How it works&apos;)]"/>
 		</list>
 		<list key="replacehistory">

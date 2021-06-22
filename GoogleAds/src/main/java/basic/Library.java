@@ -23,6 +23,7 @@ public class Library
 		pr=new Properties();
 		pr.load(Fis);
 		driver=new ChromeDriver();
+		driver.manage().window().maximize();
 		driver.get(URL);
 		System.out.println(driver.getTitle());
 		return "BrowserOpen";
@@ -298,9 +299,10 @@ public class Library
 		return "MoreSolution Links Pass";
 	}
 	
-	public void HeaderLinks() throws InterruptedException
-	{
-		driver.findElement(By.xpath(pr.getProperty("HowItWOrks"))).click();Thread.sleep(2000);
+	public String HeaderLinks() throws InterruptedException
+	{	
+// How It Work		
+		driver.findElement(By.xpath(pr.getProperty("HeadHowitworks"))).click();Thread.sleep(2000);
 		
 		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
 		
@@ -308,6 +310,155 @@ public class Library
 		{	System.out.println("Success");}
 		else
 		{System.out.println("Unsuccessful");}
+		
+//Cost
+		driver.findElement(By.xpath(pr.getProperty("HeadCost"))).click();Thread.sleep(2000);
+		
+		exp ="Set a Flexible Advertising Budget that Works | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		
+//FAQ		
+		driver.findElement(By.xpath(pr.getProperty("FAQ"))).click();Thread.sleep(2000);
+		
+		exp ="FAQs & Advertising Resources | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+
+// Advance		
+		driver.findElement(By.xpath(pr.getProperty("Advance"))).click();Thread.sleep(2000);
+		
+		exp ="Explore Advanced Advertising Strategies | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		
+//Contact		
+		driver.findElement(By.xpath(pr.getProperty("Contact"))).click();Thread.sleep(2000);
+		
+		exp ="Contact Us for Help | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+// Case Studies		
+		driver.findElement(By.xpath(pr.getProperty("CaseStudies"))).click();Thread.sleep(2000);
+		
+		exp ="Success Stories & Case Studies | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+// Basic of Online marketing
+		driver.findElement(By.xpath(pr.getProperty("BasicofOnlineMarketing"))).click();Thread.sleep(2000);
+		
+		exp ="Tips & Resources for Online Advertising | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+// How Google Ads Works
+		driver.findElement(By.xpath(pr.getProperty("HowGoogleAdsWorks"))).click();Thread.sleep(2000);
+		
+		exp ="How Google Ads Works | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+// Costs & Budget	
+		driver.findElement(By.xpath(pr.getProperty("Costs&budget"))).click();Thread.sleep(2000);
+		
+		exp ="Costs & Budgets Management for Google Ads | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+//Overview		
+		driver.findElement(By.xpath(pr.getProperty("HeadOverview"))).click();Thread.sleep(2000);
+				
+		exp ="Get More Customers With Easy Online Advertising | Google Ads";act = driver.getTitle();System.out.println(act);
+				
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		return "Header Links Pass";
+	}
+	
+	public String InternalLinks()
+	{
+// GetStarted		
+		driver.findElement(By.xpath(pr.getProperty("InternalGetStarted"))).click();
+		exp ="Google Ads – Sign in";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();
+// Learn more about setting a budget		
+		driver.findElement(By.xpath(pr.getProperty("LMASAB"))).click();
+		exp ="Set a Flexible Advertising Budget that Works | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();
+//Learn how Google Ads works		
+		driver.findElement(By.xpath(pr.getProperty("LHGAW"))).click();
+		exp ="How to Use Google Ads to Reach Your Goals | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();
+//Read more case studies		
+		driver.findElement(By.xpath(pr.getProperty("RMCS"))).click();
+		exp ="Success Stories & Case Studies | Google Ads";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();	
+		return "Internal Link Pass";
+	}
+	public String HeaderButton()
+	{
+// GetStarted Button		
+		driver.findElement(By.xpath(pr.getProperty("GetStartedButton"))).click();
+		exp ="Google Ads – Sign in";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();
+// Sign In Button		
+		driver.findElement(By.xpath(pr.getProperty("SignInButton"))).click();
+		exp ="Google Ads – Sign in";act = driver.getTitle();System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{	System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.navigate().back();
+		return "Header Button Pass";
 	}
 	public String CloseBrowser()
 	{
