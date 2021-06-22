@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+
 public class Library
 {
 	FileInputStream Fis;
@@ -460,10 +461,81 @@ public class Library
 		driver.navigate().back();
 		return "Header Button Pass";
 	}
+	
+	public String BottomLinks() throws InterruptedException
+	{
+//	Privacy	
+		driver.findElement(By.xpath(pr.getProperty("Privacy"))).click();Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Privacy Policy – Privacy & Terms – Google"; act = driver.getTitle(); System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.close(); driver.switchTo().window(tab2.get(0));	
+		Thread.sleep(2000);
+//	Term	
+		driver.findElement(By.xpath(pr.getProperty("Term"))).click();Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Google Terms of Service – Privacy & Terms – Google"; act = driver.getTitle(); System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.close(); driver.switchTo().window(tab2.get(0));	
+		Thread.sleep(2000);
+// AboutGoogle		
+		driver.findElement(By.xpath(pr.getProperty("AboutGoogle"))).click();Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Google - About Google, Our Culture & Company News"; act = driver.getTitle(); System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.close(); driver.switchTo().window(tab2.get(0));	
+		Thread.sleep(2000);
+//	GoogleProducts	
+		driver.findElement(By.xpath(pr.getProperty("GoogleProducts"))).click();Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Browse All of Google's Products & Services - Google"; act = driver.getTitle(); System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.close(); driver.switchTo().window(tab2.get(0));	
+		Thread.sleep(2000);
+//	Google	
+		driver.findElement(By.className(pr.getProperty("Google"))).click();Thread.sleep(2000);
+		tab2=new ArrayList<String>(driver.getWindowHandles());
+		driver.switchTo().window(tab2.get(1));
+
+		exp ="Google"; act = driver.getTitle(); System.out.println(act);
+		
+		if(exp.equalsIgnoreCase(act))
+		{System.out.println("Success");}
+		else
+		{System.out.println("Unsuccessful");}
+		driver.close(); driver.switchTo().window(tab2.get(0));	
+		Thread.sleep(2000);
+		return "Bottom List Pass";
+	}
+	
 	public String CloseBrowser()
 	{
 		driver.close();
-		return "Browser Close";
+		return "PASS";
 	}
 
 }

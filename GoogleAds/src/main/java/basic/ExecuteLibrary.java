@@ -34,6 +34,10 @@ public class ExecuteLibrary {
 		String HB =obj.HeaderButton();
 		System.out.println(HB);
 		
+		String BLS =obj.BottomLinks();
+		System.out.println(BLS);
+		
+		
 		String cb=obj.CloseBrowser();
 		System.out.println(cb);
 		
