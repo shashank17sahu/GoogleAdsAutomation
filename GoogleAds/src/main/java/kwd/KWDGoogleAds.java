@@ -30,7 +30,7 @@ public class KWDGoogleAds
 			System.out.println(tsRc);				
 		//test cases
 
-			for (int i = 1;i<=tcRc-1;i++)
+			for (int i = 1;i<=tcRc;i++)
 			{
 				String exe=ws.getRow(i).getCell(2).getStringCellValue();
 				if (exe.equalsIgnoreCase("Y"))
