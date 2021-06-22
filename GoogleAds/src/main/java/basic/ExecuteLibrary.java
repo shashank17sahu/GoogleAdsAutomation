@@ -25,6 +25,15 @@ public class ExecuteLibrary {
 		String aga=obj.AboutGoogleAds();
 		System.out.println(aga);System.out.println();
 		
+		String HL=obj.HeaderLinks();
+		System.out.println(HL);System.out.println();
+		
+		String IL =obj.InternalLinks();
+		System.out.println(IL);
+		
+		String HB =obj.HeaderButton();
+		System.out.println(HB);
+		
 		String cb=obj.CloseBrowser();
 		System.out.println(cb);
 		
