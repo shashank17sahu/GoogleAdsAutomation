@@ -79,7 +79,7 @@ public class KWDGoogleAds
 								Res=LB.CloseBrowser();
 								break;
 							case "BLS":
-								Res=LB.CloseBrowser();
+								Res=LB.BottomLinks();
 								break;
 			
 							default:
